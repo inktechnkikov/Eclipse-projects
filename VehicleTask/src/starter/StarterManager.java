@@ -46,6 +46,5 @@ public class StarterManager {
 	public void start() {
 		Class selectVehicle = selectVehicle();
 		IVehicle vehicle = VehicleFactory.createNewVehicle(selectVehicle);
-
 	}
 }

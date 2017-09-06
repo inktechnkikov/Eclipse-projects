@@ -17,7 +17,7 @@ public class ConsoleMenu implements IMenu{
 	@Override
 	public MenuItem requestSelection() {
 		for(int i = 0;i < items.size();i++) {
-			System.out.println(i + "(" + items.get(i).getName());
+			System.out.println(i + ")" + items.get(i).getName());
 		}
 		if(!items.isEmpty()) {
 			Scanner scanner = new Scanner(System.in);
