@@ -1,16 +1,16 @@
 package entities;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
-import interfaces.Vehicle;
+import interfaces.ExecutableOperations;
+import interfaces.IVehicle;
 
-public class Car implements Vehicle {
+public class Car implements IVehicle {
 	String engine;
 	Integer hoursePower;
 	Integer maxSpeed;
-	StringBuilder builder = new StringBuilder();
-
+	
 	public Car(String engine, Integer hoursePower, Integer maxSpeed) {
 		this.engine = engine;
 		this.hoursePower = hoursePower;
@@ -18,9 +18,15 @@ public class Car implements Vehicle {
 	}
 
 	@Override
-	public String getEngineType() {
+	public void engineStart() {
+		
+		System.out.println("Car engine is starting...");
+		
+	}
 
-		return "Engine is " + this.engine;
+	@Override
+	public String getEngineType() {
+		return this.engine;
 	}
 
 	@Override
@@ -34,26 +40,97 @@ public class Car implements Vehicle {
 	}
 
 	@Override
-	public StringBuilder showCommands() {
-		this.builder = new StringBuilder();
-		return builder.append("Print engine type").append("\n").append("print Hourse power").append("\n")
-				.append("print Max Speed");
+	public void gearUp() {
+		System.out.println("Shift gear up");
+		
 	}
 
 	@Override
-	public void parseCommands() throws Exception {
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		String inputCommand=reader.readLine();
-		if(inputCommand.equals("Print engine type")){
-			System.out.println(this.getEngineType());
-		}else if(inputCommand.equals("print Horse power")) {
-			System.out.println(this.hoursePower);
-		}else if(inputCommand.equals("print Max Speed")) {
-			System.out.println(this.getMaxSpeed());
-		}
+	public void gearDown() {
+		System.out.println("Shift gear down");
+		
 	}
 
-
-	
-	
+	@Override
+	public List<ExecutableOperations> executableOperations() {
+		List<ExecutableOperations> operations = new ArrayList<ExecutableOperations>();
+		operations.add(new ExecutableOperations() {
+			
+			@Override
+			public String getName() {
+			return "start engine";
+			}
+			
+			@Override
+			public void executeOperation() {
+				engineStart();
+				
+			}
+		});
+		operations.add(new ExecutableOperations() {
+			
+			@Override
+			public String getName() {
+				return "get type of engine";
+			}
+			
+			@Override
+			public void executeOperation() {
+				getEngineType();
+				
+			}
+		});
+		operations.add(new ExecutableOperations() {
+			
+			@Override
+			public String getName() {
+				return "get hourse power";
+			}
+			
+			@Override
+			public void executeOperation() {
+				hoursePower();
+				
+			}
+		});
+		operations.add(new ExecutableOperations() {
+			
+			@Override
+			public String getName() {
+				return "get max speed";
+			}
+			
+			@Override
+			public void executeOperation() {
+				getMaxSpeed();
+				
+			}
+		});
+		operations.add(new ExecutableOperations() {
+			
+			@Override
+			public String getName() {
+				return "gear up";
+			}
+			
+			@Override
+			public void executeOperation() {
+				gearUp();
+			}
+		});
+		operations.add(new ExecutableOperations() {
+			
+			@Override
+			public String getName() {
+			return "gear down";
+			}
+			
+			@Override
+			public void executeOperation() {
+				gearDown();
+				
+			}
+		});
+		return operations;
+	}
 }

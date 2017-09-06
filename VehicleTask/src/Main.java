@@ -1,20 +1,13 @@
 import entities.Car;
-import interfaces.Vehicle;
+import menu.ConsoleMenu;
+import starter.StarterManager;
 
 public class Main {
 
-	public static void main(String[] args) throws Exception {
-		
-			Vehicle car = new Car("Benzin", 160, 220);
-			printCommands(car);
-			startCommands(car);
-			
+	public static void main(String[] args) {
+		StarterManager manager = new StarterManager(Car.class);
+		manager.setMenu(new ConsoleMenu());
+		manager.start();
 	}
-	public static void printCommands(Vehicle vehicle) {
-		System.out.println(vehicle.showCommands());
-	}
-	public static void startCommands(Vehicle vehicle) throws Exception {
-		vehicle.parseCommands();
-	}
-	
+
 }
