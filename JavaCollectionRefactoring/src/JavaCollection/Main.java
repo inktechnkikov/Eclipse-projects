@@ -1,5 +1,7 @@
 package JavaCollection;
 
+import java.lang.reflect.Method;
+
 import JavaCollection.Constants.Elements;
 import JavaCollection.Interfaces.ICollectionUtils;
 import JavaCollection.Models.List.ListCollection;
@@ -12,9 +14,6 @@ public class Main {
 	public static void main(String[] args) {
 		ICollectionUtils mapCollection = new HashMapCollection();
 		mapCollection.insterItems(Elements.ELEMENTSTOADD);
-		mapCollection.printItems();
-		mapCollection.addItem(1);
-		mapCollection.printItems();
+		
 	}
-
 }
