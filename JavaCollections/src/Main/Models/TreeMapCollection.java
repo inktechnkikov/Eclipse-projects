@@ -1,18 +1,15 @@
 package Main.Models;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Map.Entry;
 
 import Main.Interfaces.iMapCollection;
 
+public class TreeMapCollection extends MapColImp {
 
-public class HashMapCollection extends MapColImp{
-
-	private Map<String, Integer> data;
-	
-	public HashMapCollection() {
-		super(new HashMap<>());
+	public TreeMapCollection() {
+		super(new TreeMap<>());
 	}
 
 	@Override
@@ -26,6 +23,6 @@ public class HashMapCollection extends MapColImp{
 		// TODO Auto-generated method stub
 		super.printItems();
 	}
-	
+
 	
 }

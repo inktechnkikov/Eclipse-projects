@@ -1,18 +1,16 @@
 package Main;
 
-import java.util.HashMap;
-import java.util.Random;
-
-import Main.Interfaces.MapCollection;
+import Main.Interfaces.iMapCollection;
 import Main.Models.HashMapCollection;
+import Main.Models.TreeMapCollection;
 
 public class Main {
 
 	public static void main(String[] args) {
-	MapCollection hasMapCollection = new HashMapCollection();
-	hasMapCollection.addKeysAndValues(4);
-	hasMapCollection.printElements();
-	hasMapCollection.searchByKey(43);
+		iMapCollection treeMapCollection = new TreeMapCollection();
+		treeMapCollection.addKeyValue();
+		treeMapCollection.printItems();
+		
 	}
 
 }
