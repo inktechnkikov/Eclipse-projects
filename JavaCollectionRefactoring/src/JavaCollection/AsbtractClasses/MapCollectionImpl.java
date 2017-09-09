@@ -16,7 +16,7 @@ public abstract class MapCollectionImpl implements ICollectionUtils {
 
 	@Override
 	public void insterItems(int elements) {
-		Random random = new Random();
+		Random random = new Random(10);
 		int i = 0;
 		while (i < elements) {
 			i++;
@@ -47,4 +47,10 @@ public abstract class MapCollectionImpl implements ICollectionUtils {
 		}
 
 	}
+
+	@Override
+	public void addItem(int item) {
+		
+	}
+	
 }

@@ -1,14 +1,14 @@
-package JavaCollection.Models.Map;
+package JavaCollection.Models.List;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
-import JavaCollection.AsbtractClasses.MapCollectionImpl;
-import JavaCollection.AsbtractClasses.SetCollectionImpl;
+import JavaCollection.AsbtractClasses.ListCollectionImpl;
 
-public class HashMapCollection extends MapCollectionImpl{
+public class ListCollection extends ListCollectionImpl{
 	
-	public HashMapCollection() {
-		super(new HashMap<>());
+
+	public ListCollection() {
+		super(new ArrayList<>());
 	}
 
 	@Override
@@ -33,6 +33,12 @@ public class HashMapCollection extends MapCollectionImpl{
 	public void printItems() {
 		// TODO Auto-generated method stub
 		super.printItems();
+	}
+
+	@Override
+	public void addItem(int item) {
+		
+		
 	}
 
 }

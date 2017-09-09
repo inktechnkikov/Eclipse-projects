@@ -41,6 +41,12 @@ public abstract class SetCollectionImpl implements ICollectionUtils{
 		}
 		
 	}
+
+	@Override
+	public void addItem(int item) {
+		this.setCollectionEngine.add(item);
+		
+	}
 		
 	
 }
