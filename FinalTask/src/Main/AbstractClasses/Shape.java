@@ -3,11 +3,8 @@ package Main.AbstractClasses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import com.sun.org.apache.regexp.internal.recompile;
-
 import Main.Interfaces.IShape;
-import Main.NumberConstants.ConstantValues;
+
 
 public class Shape implements IShape{
 

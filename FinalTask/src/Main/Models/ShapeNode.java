@@ -6,10 +6,25 @@ import Main.AbstractClasses.Shape;
 
 
 public class ShapeNode extends Shape{
-	
-	private Random randomGenerator;
-	private int addRandomNumber;
-	
+
+	@Override
+	public String addRandomShape() {
+		// TODO Auto-generated method stub
+		return super.addRandomShape();
+	}
+
+	@Override
+	public int addRandomNumber() {
+		// TODO Auto-generated method stub
+		return super.addRandomNumber();
+	}
+
+	@Override
+	public void addRandomNumberAdnRandomShape() {
+		// TODO Auto-generated method stub
+		super.addRandomNumberAdnRandomShape();
+	}
+
 
 	}
 	

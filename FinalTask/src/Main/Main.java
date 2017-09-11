@@ -2,6 +2,7 @@ package Main;
 
 import Main.AbstractClasses.Shape;
 import Main.Interfaces.IShape;
+import Main.Models.ShapeNode;
 import Main.TreeImpl.Tree;
 
 public class Main {
@@ -23,8 +24,11 @@ public class Main {
         Iterable printRes = tree.orderBFS();
         System.out.println(builder.append(' ').append(printRes));
         */
-		IShape shape = new Shape();
-		shape.addRandomNumberAdnRandomShape();
+	//	IShape shape = new Shape();
+		//shape.addRandomNumberAdnRandomShape();
+		
+		ShapeNode shapeNode = new ShapeNode();
+		shapeNode.addRandomNumberAdnRandomShape();
 	}
 
 }
