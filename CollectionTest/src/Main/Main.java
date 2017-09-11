@@ -13,6 +13,7 @@ public class Main {
 		hashSet(data);
 		treeSet(data);
 		linkedHashSet(data);
+		hashSet(data);
 	}
 
 	public static void hashSet(int[] arr) {
