@@ -1,12 +1,14 @@
 package Main;
 
+import Main.AbstractClasses.Shape;
+import Main.Interfaces.IShape;
 import Main.TreeImpl.Tree;
 
 public class Main {
 
 	public static void main(String[] args) {
 	
-		Tree<Integer> tree = new Tree<>(7,
+		/* Tree<Integer> tree = new Tree<>(7,
                 new Tree<>(19,
                 new Tree<>(1),
                 new Tree<>(12),
@@ -20,6 +22,9 @@ public class Main {
       //  System.out.println(builder.append(' ').append(res));
         Iterable printRes = tree.orderBFS();
         System.out.println(builder.append(' ').append(printRes));
+        */
+		IShape shape = new Shape();
+		shape.addRandomNumberAdnRandomShape();
 	}
 
 }
