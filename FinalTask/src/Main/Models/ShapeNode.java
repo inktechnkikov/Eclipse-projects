@@ -1,16 +1,40 @@
 package Main.Models;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
-import Main.AbstractClasses.Shape;
+import Main.Interfaces.IShapeNode;
+import sun.net.www.content.text.plain;
 
+public class ShapeNode extends ColoredNode implements IShapeNode{
 
-public class ShapeNode extends Shape{
+	private List<String> shapeList;;
+	private Random randomGenerator;
+	@Override
+	public String getRandomShape() {
+		this.shapeList = new ArrayList<String>();
+		String[] shapes = {
+				"diamond",
+				"triangle",
+				"circle",
+				"rectangle"
+		};
+		for (int i = 0; i < shapes.length; i++) {
+			this.shapeList.add(shapes[i]);
+		}
+		
+		this.randomGenerator = new Random();
+		int getIndex = randomGenerator.nextInt(this.shapeList.size());
+		String getRandomShape = this.shapeList.get(getIndex);
+		System.out.println(getRandomShape);
+		return getRandomShape;
+	}
 
 	@Override
-	public String addRandomShape() {
+	public String addRandomColor() {
 		// TODO Auto-generated method stub
-		return super.addRandomShape();
+		return super.addRandomColor();
 	}
 
 	@Override
@@ -20,13 +44,14 @@ public class ShapeNode extends Shape{
 	}
 
 	@Override
-	public void addRandomNumberAdnRandomShape() {
-		// TODO Auto-generated method stub
-		super.addRandomNumberAdnRandomShape();
+	public void addRandomItems() {
+		super.addRandomNumber();
+		addRandomColor();
+		getRandomShape();
 	}
 
-
-	}
+	
+}
 	
 	
 

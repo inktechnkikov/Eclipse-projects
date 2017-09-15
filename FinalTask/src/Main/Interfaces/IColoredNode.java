@@ -1,9 +1,7 @@
 package Main.Interfaces;
 
-public interface IShape {
-	String addRandomShape();
+public interface IColoredNode extends ISimpleMode{
+
+	public String addRandomColor();
 	
-	int addRandomNumber();
-	
-	void addRandomNumberAdnRandomShape();
 }

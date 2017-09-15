@@ -1,8 +1,12 @@
 package Main;
 
-import Main.AbstractClasses.Shape;
-import Main.Interfaces.IShape;
+
+import Main.Interfaces.IColoredNode;
+import Main.Interfaces.IShapeNode;
+import Main.Interfaces.ISimpleMode;
+import Main.Models.ColoredNode;
 import Main.Models.ShapeNode;
+import Main.Models.SimpleNode;
 import Main.TreeImpl.Tree;
 
 public class Main {
@@ -26,9 +30,8 @@ public class Main {
         */
 	//	IShape shape = new Shape();
 		//shape.addRandomNumberAdnRandomShape();
-		
-		ShapeNode shapeNode = new ShapeNode();
-		shapeNode.addRandomNumberAdnRandomShape();
+			ShapeNode shapeNode = new ShapeNode();
+			shapeNode.addRandomItems();
 	}
 
 }
