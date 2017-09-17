@@ -30,8 +30,7 @@ public class Main {
         */
 	//	IShape shape = new Shape();
 		//shape.addRandomNumberAdnRandomShape();
-			ShapeNode shapeNode = new ShapeNode();
-			shapeNode.addRandomItems();
+			
 	}
 
 }
