@@ -6,12 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 
-public class Tree<T> {
+import Main.Interfaces.ISimpleMode;
+
+public class Node<T extends ISimpleMode> {
 
 	 public T value;
-	    public ArrayList<Tree<T>> children;
+	    public ArrayList<Node<T>> children;
 
-	        public Tree(T value,Tree<T>...children){
+	        public Node(T value,Node<T>...children){
 	            this.value = value;
 	            this.children = new ArrayList<>(Arrays.asList(children));
 	    }
@@ -19,7 +21,7 @@ public class Tree<T> {
 	            StringBuilder builder = new StringBuilder();
 	            builder.append(' ');
 	        System.out.println(this.value);
-	        for (Tree<T> child : this.children) {
+	        for (Node<T> child : this.children) {
 	            System.out.printf("%s",builder);
 	         child.print();
 	        }
@@ -29,20 +31,20 @@ public class Tree<T> {
 	       this.DFS(this,result);
 	       return result;
 	    }
-	    public void DFS(Tree<T> tree,List<T> resultList){
-	        for (Tree<T> child : tree.children) {
+	    public void DFS(Node<T> tree,List<T> resultList){
+	        for (Node<T> child : tree.children) {
 	            this.DFS(child,resultList);
 	        }
 	        resultList.add(tree.value);
 	    }
 	    public Iterable<T> orderBFS(){
 	        List<T> result = new ArrayList<>();
-	        Queue<Tree<T>> queue = new ArrayDeque<>();
+	        Queue<Node<T>> queue = new ArrayDeque<>();
 	        queue.add(this);
 	        while (!queue.isEmpty()){
-	            Tree<T> current = queue.poll();
+	            Node<T> current = queue.poll();
 	            result.add(current.value);
-	            for (Tree<T> child : current.children) {
+	            for (Node<T> child : current.children) {
 	                queue.add(child);
 	            }
 	        }
