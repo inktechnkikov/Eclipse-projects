@@ -3,21 +3,15 @@ package Main.Models;
 import java.util.Random;
 
 import Main.Interfaces.ISimpleMode;
+import Main.NodeImpl.RandomValueGenerator;
 import Main.NumberConstants.ConstantValues;
 
-public class SimpleNode implements ISimpleMode{
-	
-	private int randomNumber;
+public class SimpleNode extends RandomValueGenerator{
 
 	@Override
 	public int addRandomNumber() {
-		this.randomNumber = new Random().nextInt(ConstantValues.maxRangeOfNumbers);
-		System.out.println(randomNumber);
-		return this.randomNumber;
+		return super.addRandomNumber();
 	}
-	public void addRandomItems() {
-		addRandomNumber();
-	}
-
+	
 	
 }

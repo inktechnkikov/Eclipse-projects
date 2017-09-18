@@ -38,13 +38,6 @@ public class ColoredNode extends SimpleNode implements IColoredNode{
 		
 		return super.addRandomNumber();
 	}
-
-	@Override
-	public void addRandomItems() {
-		super.addRandomNumber();
-		addRandomColor();
-	}
-	
 	
 	
 }

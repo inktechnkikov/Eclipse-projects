@@ -7,6 +7,7 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
@@ -25,14 +26,12 @@ public class MyUI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-    	TextField textField = new TextField("Name");
-       Button button = new Button("Greet");
-       Button button2 = new Button("Press me");
-       button.addClickListener(btn -> Notification.show("Hello " + textField.getValue()));
-       button2.addClickListener(btn2 -> Notification.show("Your name is " + textField.getValue()));
-       VerticalLayout layout = new VerticalLayout();
-       layout.addComponents(textField,button,button2);
-       setContent(layout);
+    	TextField nameTextField = new TextField("Insert your name");
+    	Button button = new Button("click me");
+    	button.addClickListener(btn -> Notification.show("Hello, your name is " + nameTextField.getValue()));
+    	VerticalLayout verticalLayout = new VerticalLayout();
+    	verticalLayout.addComponents(nameTextField,button);
+    	setContent(verticalLayout);  
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

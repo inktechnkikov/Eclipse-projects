@@ -1,0 +1,14 @@
+de.bonprix.academy
+de.bonprix.academy.common.enums
+de.bonprix.academy.configuration
+de.bonprix.academy.modules.applicationdata
+de.bonprix.academy.modules.applicationdata.dialog.application
+de.bonprix.academy.modules.applicationdata.dialog.application.event
+de.bonprix.academy.modules.applicationdata.dialog.application.ui
+de.bonprix.academy.modules.applicationdata.dialog.applicationgroup
+de.bonprix.academy.modules.applicationdata.dialog.applicationgroup.event
+de.bonprix.academy.modules.applicationdata.dialog.applicationgroup.ui
+de.bonprix.academy.modules.applicationdata.dialog.applicationtype
+de.bonprix.academy.modules.applicationdata.dialog.applicationtype.event
+de.bonprix.academy.modules.applicationdata.dialog.applicationtype.ui
+de.bonprix.academy.modules.applicationdata.ui
