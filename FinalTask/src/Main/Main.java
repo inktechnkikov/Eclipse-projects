@@ -39,9 +39,6 @@ public class Main {
         */
 	//	IShape shape = new Shape();
 		//shape.addRandomNumberAdnRandomShape();
-		
-	//	Node<ISimpleMode> Node = new Node<ISimpleMode>(null, null);
-		
 			
 	}
 

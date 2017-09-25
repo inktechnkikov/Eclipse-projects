@@ -7,20 +7,19 @@ import java.util.Queue;
 
 import starter.interfaces.ISimpleNode;
 
-public class Node<T extends ISimpleNode> {
+public class TreeGenerator<T> {
 
 	public T value;
-	public List<Node<T>> childrenList;
+	public List<TreeGenerator<T>> childrenList;
 	
-	public Node(T value, int childrenCount) {
-		this.value = value;
-		this.childrenList = new ArrayList<>(childrenCount);
+	public TreeGenerator() {
+		
 	}
 	public void print() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(' ');
 		System.out.println(this.value);
-		for (Node<T> child : this.childrenList) {
+		for (TreeGenerator<T> child : this.childrenList) {
 			System.out.printf("%s", builder);
 			child.print();
 		}
@@ -32,8 +31,8 @@ public class Node<T extends ISimpleNode> {
 		return result;
 	}
 
-	public void DFS(Node<T> tree, List<T> resultList) {
-		for (Node<T> child : tree.childrenList) {
+	public void DFS(TreeGenerator<T> tree, List<T> resultList) {
+		for (TreeGenerator<T> child : tree.childrenList) {
 			this.DFS(child, resultList);
 		}
 		resultList.add(tree.value);
@@ -41,12 +40,12 @@ public class Node<T extends ISimpleNode> {
 
 	public Iterable<T> orderBFS() {
 		List<T> result = new ArrayList<>();
-		Queue<Node<T>> queue = new ArrayDeque<>();
+		Queue<TreeGenerator<T>> queue = new ArrayDeque<>();
 		queue.add(this);
 		while (!queue.isEmpty()) {
-			Node<T> current = queue.poll();
+			TreeGenerator<T> current = queue.poll();
 			result.add(current.value);
-			for (Node<T> child : current.childrenList) {
+			for (TreeGenerator<T> child : current.childrenList) {
 				queue.add(child);
 			}
 		}

@@ -9,13 +9,10 @@ public class Person {
 	
 	private String lastName;
 	
-	private String emailAddres;
 	
-	
-	public Person(String firstName,String lastName,String emailAdress) {
+	public Person(String firstName,String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.emailAddres = emailAdress;
 	}
 
 	public String getFirstName() {
@@ -32,14 +29,6 @@ public class Person {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getEmailAddres() {
-		return emailAddres;
-	}
-
-	public void setEmailAddres(String emailAddres) {
-		this.emailAddres = emailAddres;
 	}
 	
 

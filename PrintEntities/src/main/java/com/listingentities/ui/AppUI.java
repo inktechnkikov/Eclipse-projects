@@ -1,6 +1,7 @@
 package com.listingentities.ui;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,20 +27,18 @@ public class AppUI extends UI{
 	protected void init(VaadinRequest request) {
 		
 		VerticalLayout verticalLayout = new VerticalLayout();
-		Person person = new Person("Stamat", "Dobrev", "stamat@abv.bg");
-		Person person1 = new Person("Momo", "Kolev", "momo@abv.bg");
-		Person person2 = new Person("Grandi", "Robinson", "robinson@sss.com");
-		Person person3 = new Person("Julia", "Rols", "julia@gmail.com");
+	/*	Person person = new Person("Stamat", "Dobrev");
+		Person person1 = new Person("Momo", "Kolev");
+		Person person2 = new Person("Grandi", "Robinson");
+		Person person3 = new Person("Julia", "Rols");
 		List<Person> persons = new ArrayList<>();
-		persons.add(person);
-		persons.add(person1);
-		persons.add(person2);
-		persons.add(person3);
+		*/
+		
 		Grid<Person> grid = new Grid<Person>();
 		grid.addColumn(Person::getFirstName).setCaption("First name");
 		grid.addColumn(Person::getLastName).setCaption("Last name");
-		grid.addColumn(Person::getEmailAddres).setCaption("Email adress");
-		grid.setItems(persons);
+		 //personService.addPersons();
+		grid.setItems(hashSet);
 		verticalLayout.addComponents(grid);
 		setContent(verticalLayout);
 	}

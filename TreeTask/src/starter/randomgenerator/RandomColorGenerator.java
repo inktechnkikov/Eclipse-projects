@@ -33,7 +33,6 @@ public class RandomColorGenerator extends RandomNumberGenerator implements IColo
 		}
 		this.getRandomShape = new Random().nextInt(this.colorList.size());
 		String getShape = this.colorList.get(getRandomShape);
-		System.out.println(getShape);
 		return getShape;
 	}
 
