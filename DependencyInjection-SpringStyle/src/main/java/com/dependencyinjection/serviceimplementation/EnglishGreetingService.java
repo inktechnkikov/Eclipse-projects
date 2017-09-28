@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dependencyinjection.interfaces.GreetingService;
 
-@Primary
+
 public class EnglishGreetingService implements GreetingService{
 
 	@Override

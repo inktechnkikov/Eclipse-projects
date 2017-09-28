@@ -1,5 +1,6 @@
 package com.dependencyinjection.configuration;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +12,8 @@ import com.dependencyinjection.serviceimplementation.FrenchGreetingService;
 
 @Configuration
 public class GreetingServiceConfigoration {
+	
 	@Bean
-	//@ConditionalOnProperty(name = "language.name",havingValue = "english",matchIfMissing = true)
 	public GreetingService englishGreetingService() {
 		return new EnglishGreetingService();
 	}
@@ -21,5 +22,4 @@ public class GreetingServiceConfigoration {
 	public GreetingService frencGreetingService() {
 		return new FrenchGreetingService();
 	}
-
 }
